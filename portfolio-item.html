@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Matthew Kellner Personal Portfolio Website</title>
+        <title>Simple Interest Calculator</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
 
         <!-- Update with any fonts -->
         <link rel="stylesheet" href="css/style.css">
-      
+        <link rel="stylesheet" href="css/style1.css">
     </head>
     <body>
         <header>
@@ -32,20 +32,50 @@
         <!-- Introduction -->
         <section class="intro" id="home">
             <h1 class="section__title section__title--intro">
-                The title <strong>of my project</strong>
+                First Project <strong>Simple Interest Calculator</strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro">A short subtitle</p>
+            <p class="section__subtitle section__subtitle--intro">#HTML #JS #CSS</p>
             <img width= "300px" height= "400px", src="img/7DDD4883-E7C8-43BC-9505-A5CC99BBAF57_1_105_c.jpeg" alt="a picture of Matt smiling in a suit">
         </section>
         
         <div class="portfolio-item-individual">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <img src="/img/images.jpeg" alt="">
-        </div>
+            <div class= "maindiv centered" >
+                <h1>Simple Interest Calculator</h1>
+                
+                <label>Amount</label>
+                <input type="number"  id="principal" onchange="validateAmount()"> 
         
+                <label>Rate</label>
+                <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="getSliderValue()"><span id="rateSpan">10.50%</span> 
+        
+                <label>Number of Years</label>  
+                <select name="years" id="years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+        
+                <button onclick="compute()">Compute Interest</button><br/>
+                <span id="result"></span><br>
+                <span id="result"></span>
+                <footer>&#169; This Calculator belongs to Matthew Kellner </footer>
+            </div>
+            </body>
+        </div>
+
+        <!--description-->
+        <section class="description-section">
+            <h3 class="description-title">Description</h3>
+            <p class="description"> In this project I used my knowledge of <strong>HTML, CSS, and JS</strong> to create the simple calculator above. By selecting an amount and an interest rate this will calculate the amount of interest someone will accrue over a certain period of time.</p>
+
+        </section>
         
         <!-- Footer -->
         <footer class="footer">
@@ -56,8 +86,8 @@
                     <i class="fab fa-codepen"></i>
                 </a>
             </li>
-                <li class="social-list__item"><a class="social-list__link" href="http://instagram.com" target="_blank">
-                    <i class="fab fa-instagram"></i>
+                <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/mkellner43/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
 
                 </a>
             </li>
@@ -74,6 +104,7 @@
         </footer>
 
         <script src="js/index.js"></script>
+        <script src="js/script.js"></script>
         
     </body>
 </html>
